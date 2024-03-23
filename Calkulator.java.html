@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Calkulator.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #067d17;}
+.s3 { color: #1750eb;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Calkulator.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner;</span>
+
+<span class="s0">public class </span><span class="s1">Calkulator {</span>
+    <span class="s0">public static void </span><span class="s1">main(String args[]) {</span>
+        <span class="s0">while </span><span class="s1">(</span><span class="s0">true</span><span class="s1">) {</span>
+            <span class="s1">Scanner scanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in);</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Вводим первое число&quot;</span><span class="s1">);</span>
+                <span class="s0">float </span><span class="s1">operand1 = scanner.nextFloat();</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Введите операцию(+, -, *, /, %)&quot;</span><span class="s1">);</span>
+                <span class="s0">char </span><span class="s1">operation = scanner.next().charAt(</span><span class="s3">0</span><span class="s1">);</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Вводим второе число&quot;</span><span class="s1">);</span>
+                <span class="s0">float </span><span class="s1">operand2 = scanner.nextFloat();</span>
+
+            <span class="s0">switch </span><span class="s1">(operation) {</span>
+                <span class="s0">case </span><span class="s2">'+'</span><span class="s1">:</span>
+                    <span class="s0">float </span><span class="s1">operation1 = operand1 + operand2;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Результат сложения: &quot; </span><span class="s1">+ operation1);</span>
+                    <span class="s0">break</span><span class="s1">;</span>
+                <span class="s0">case </span><span class="s2">'-'</span><span class="s1">:</span>
+                    <span class="s0">float </span><span class="s1">operation2 = operand1 - operand2;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Результат вычитания: &quot; </span><span class="s1">+ operation2);</span>
+                    <span class="s0">break</span><span class="s1">;</span>
+                <span class="s0">case </span><span class="s2">'*'</span><span class="s1">:</span>
+                    <span class="s0">float </span><span class="s1">operation3 = operand1 * operand2;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Результат умножения: &quot; </span><span class="s1">+ operation3);</span>
+                    <span class="s0">break</span><span class="s1">;</span>
+                <span class="s0">case </span><span class="s2">'/'</span><span class="s1">:</span>
+                    <span class="s0">if </span><span class="s1">(operand2 == </span><span class="s3">0</span><span class="s1">){</span>
+                        <span class="s1">System.out.println(</span><span class="s2">&quot;Делить на ноль нельзя&quot;</span><span class="s1">);</span>
+                    <span class="s1">}</span>
+                    <span class="s0">float </span><span class="s1">operation4 = operand1 / operand2;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Результат деления: &quot; </span><span class="s1">+ operation4);</span>
+                    <span class="s0">break</span><span class="s1">;</span>
+                <span class="s0">case </span><span class="s2">'%'</span><span class="s1">:</span>
+                    <span class="s0">float </span><span class="s1">operation5 = operand1 % operand2;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Остаток от деления: &quot; </span><span class="s1">+ operation5);</span>
+                    <span class="s0">break</span><span class="s1">;</span>
+                <span class="s0">default</span><span class="s1">:</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Введены не верные данные&quot;</span><span class="s1">);</span>
+                    <span class="s0">break</span><span class="s1">;</span>
+
+            <span class="s1">}</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;continue?y/n&quot;</span><span class="s1">);</span>
+            <span class="s1">String xuanXiang = scanner.next();</span>
+            <span class="s0">if </span><span class="s1">(xuanXiang.equals(</span><span class="s2">&quot;y&quot;</span><span class="s1">)) {</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Продолжить использование&quot;</span><span class="s1">);</span>
+            <span class="s1">} </span><span class="s0">else if </span><span class="s1">(xuanXiang.equals(</span><span class="s2">&quot;n&quot;</span><span class="s1">)) {</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Спасибо за использование этого вычисления, добро пожаловать в следующий раз, увидимся позже&quot;</span><span class="s1">);</span>
+                <span class="s0">break</span><span class="s1">;</span>
+
+            <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span></pre>
+</body>
+</html>

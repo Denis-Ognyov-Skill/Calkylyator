@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Calkylyator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Calkylyator_jar</output-path>
+    <root id="archive" name="Calkylyator.jar">
+      <element id="module-output" name="Calkylyator" />
+    </root>
+  </artifact>
+</component>
